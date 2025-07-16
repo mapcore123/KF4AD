@@ -83,7 +83,7 @@ class AEKF2:
 # Simple 1‑iteration test helper
 # ----------------------------------------------------------------------------
 
-def test_aekf1_single_iteration() -> None:
+def test_aekf2_single_iteration() -> None:
     """Run one predict–update cycle with synthetic data and print results."""
     # Filter parameters
     dt = 0.1
@@ -107,7 +107,7 @@ def test_aekf1_single_iteration() -> None:
     kf.update(z_body, r_vector)
 
     # Print results
-    print("\n=== AEKF‑1 single iteration test ===")
+    print("\n=== AEKF‑2 single iteration test ===")
     print("State estimate x:", kf.x)
     print("Quaternion ‖q‖:", np.linalg.norm(kf.quaternion))
     print("Bias estimate μ:", kf.bias)
@@ -116,4 +116,4 @@ def test_aekf1_single_iteration() -> None:
 # Only run the test when this file is executed stand‑alone
 if __name__ == "__main__":
     # np.set_printoptions(precision=4, suppress=True)
-    test_aekf1_single_iteration()
+    test_aekf2_single_iteration()
