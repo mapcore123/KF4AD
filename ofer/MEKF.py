@@ -6,7 +6,7 @@ from ofer.matrices import *
 # ----------------------------------------------------------------------------
 '''
 need to verify the order of hamilton product dqxq or qxdq.
-need to verify if H is -Aq[r]_x or [Aqr]x
+need to veגrify if H is -Aq[r]_x or [Aqr]x
 '''
 class MEKF:
     def __init__(self, dt: float, sigma_eps: float, sigma_n: float, sigma_b: float,
